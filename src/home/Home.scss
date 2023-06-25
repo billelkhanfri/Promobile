@@ -1,8 +1,62 @@
 @import "../styles/variables.scss";
+//Logo
+.custom-logo {
+  height: 50px;
+}
 
 .bb {
   color: $primary-color;
 }
 .custom-bg {
   background-color: $secondary-color;
+}
+.custom-height {
+  height: 600px;
+  object-fit: cover;
+}
+
+//Slider
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* MyCarousel.css */
+
+.animate-caption {
+  opacity: 0; /* Initially hide the caption */
+  animation: fade-in 1s ease-in-out forwards; /* Add your desired animation */
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.orange-bg {
+  background-color: rgba(255, 165, 0, 0.75);
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+}
+//button
+.button-with-icon {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.text {
+  white-space: nowrap; /* Prevent line break for the text */
 }
