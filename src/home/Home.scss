@@ -15,31 +15,6 @@
   object-fit: cover;
 }
 
-//Slider
-.carousel-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-/* MyCarousel.css */
-
-.animate-caption {
-  opacity: 0; /* Initially hide the caption */
-  animation: fade-in 1s ease-in-out forwards; /* Add your desired animation */
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .orange-bg {
   background-color: rgba(255, 165, 0, 0.75);
   padding: 10px;
@@ -48,15 +23,49 @@
   font-weight: 600;
 }
 //button
+.call-location {
+  display: flex;
+  gap: 10px;
+}
+
 .button-with-icon {
   display: flex;
   align-items: center;
 }
-
+@media (max-width: 991px) {
+  .button-with-icon {
+    width: 100%;
+    justify-content: center;
+  }
+}
 .icon {
   margin-right: 5px;
 }
 
 .text {
   white-space: nowrap; /* Prevent line break for the text */
+  padding: 0;
+}
+//Banner
+.responsive-heading {
+  font-size: 70px;
+
+  /* Responsive font sizes based on screen size */
+  @media (max-width: 991px) {
+    font-size: 50px;
+  }
+}
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+@media (max-width: 991px) {
+  //link
+  .home-link {
+    margin-top: 50px;
+    color: green;
+  }
 }

@@ -1,12 +1,12 @@
 import React, { Component } from "react";
+import Banner from "../components/Banner";
 import NavBar from "../components/NavBar";
-import Slider from "../components/Slider";
 
 function homePage(props) {
   return (
     <>
       <NavBar></NavBar>
-      <Slider></Slider>
+      <Banner></Banner>
     </>
   );
 }

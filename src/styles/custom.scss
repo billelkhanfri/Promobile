@@ -1,0 +1,68 @@
+@import "./variables.scss";
+
+//custom nav
+.navbar-brand {
+  padding: 0px;
+  margin: 0px;
+}
+.custom-links {
+  width: 100%;
+  max-height: 100px;
+  justify-content: space-evenly;
+}
+.nav-link.active {
+  border-bottom: 4px solid $primary-color;
+}
+.nav-link:hover {
+  color: $secondary-color; /* Hover link color */
+}
+.nav-link {
+  font-size: 14px;
+  padding: 6px 12px;
+  border: solid transparent;
+}
+@media (max-width: 991px) {
+  .nav-link {
+    border-top: 3px solid #dee2e6;
+  }
+  .nav-link.active {
+    border-bottom: none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .nav-link {
+    font-size: 14px;
+  }
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+.btn-outline-danger {
+  color: $secondary-color;
+  border-color: $secondary-color;
+}
+.btn-outline-danger.active {
+  color: white;
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+}
+.btn-outline-danger:hover {
+  color: white;
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+}
+@media (max-width: 991px) {
+  .btn-outline-danger.active {
+    color: white;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+}
+// custom slider
+.carousel-inner {
+  height: 450px;
+}
+.carousel-caption {
+  bottom: 10.25rem;
+}

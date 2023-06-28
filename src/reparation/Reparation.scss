@@ -1,0 +1,55 @@
+@import "../styles/variables.scss";
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* MyCarousel.css */
+
+.animate-caption {
+  opacity: 0; /* Initially hide the caption */
+  animation: fade-in 1s ease-in-out forwards; /* Add your desired animation */
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+//devices
+
+.container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.device-img {
+  object-fit: cover;
+  width: 150px;
+  transition: transform 0.3s ease-in-out;
+}
+.image-wrapper:hover .device-img {
+  transform: scale(1.25);
+}
+.repair-title {
+  color: $secondary-color;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.device-name {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+}

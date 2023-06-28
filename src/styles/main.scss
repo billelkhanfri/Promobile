@@ -1,7 +1,9 @@
 @import "variables.scss";
+@import "bootstrap";
+@import "custom";
 /* The following line can be included in a src/App.scss */
 @import "~bootstrap/scss/bootstrap";
 body {
-  background-color: gainsboro;
+  background-color: rgb(240, 240, 240);
   font-family: $main-font;
 }
