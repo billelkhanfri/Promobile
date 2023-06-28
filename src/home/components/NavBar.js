@@ -1,62 +1,87 @@
-import React, { Component } from "react";
+import React from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-
-import { FaLocationArrow } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import { ImLocation } from "react-icons/im";
+import { IoIosCall } from "react-icons/io";
 import PropTypes from "prop-types";
 import "../Home.scss";
 
 function NavBar(props) {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
-      <Container fluid>
-        <Navbar.Brand href="#">
+      <Container fluid="md">
+        <Navbar.Brand className="custom-nav" href="#">
           <img
             className="custom-logo"
-            src="/images/retour-1.PNG"
+            src="/images/web.png"
             alt="Third slide"
           />
-          EXPERT SOUDURE
+          <span
+            style={{
+              color: "orange",
+              fontWeight: "bolder",
+              fontSize: "16px",
+              textTransform: "uppercase",
+            }}
+          >
+            {" "}
+            Expert Soudure
+          </span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px" }}
+            className="me-auto my-2 my-lg-0 d-flex  custom-links"
+            style={{ maxHeight: "190px", overflowX: "auto" }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
+            <Nav.Link
+              as={NavLink}
+              exact
+              to="/"
+              activeClassName="active-link"
+              className="home-link"
+            >
+              ACCUEIL
+            </Nav.Link>
+            <Nav.Link
+              as={NavLink}
+              to="/reparation"
+              activeClassName="active-link"
+            >
+              REPARATION
+            </Nav.Link>
+            <Nav.Link
+              as={NavLink}
+              to="/microsoudure"
+              activeClassName="active-link"
+            >
+              MICROSOUDURE
+            </Nav.Link>
+            <Nav.Link
+              as={NavLink}
+              to="/accessoire"
+              activeClassName="active-link"
+            >
+              ACCESSOIRE
             </Nav.Link>
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="success" className="button-with-icon d-flex">
-              <FaLocationArrow className="icon" />
+          <div className="call-location">
+            <Button
+              variant="outline-primary"
+              className="button-with-icon d-flex"
+            >
+              {" "}
+              <IoIosCall className="icon" /> 10204412258
+            </Button>{" "}
+            <Button variant="primary" className="button-with-icon d-flex">
+              <ImLocation className="icon" />
               <span className="text">Localisation</span>
             </Button>
-          </Form>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
