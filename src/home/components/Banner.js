@@ -7,6 +7,10 @@ import Image from "react-bootstrap/Image";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { Jumbotron } from "react-bootstrap";
+import { AiFillFacebook } from "react-icons/ai";
+import { AiFillInstagram } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
+
 import "../Home.scss";
 
 function Banner(props) {
@@ -31,6 +35,7 @@ function Banner(props) {
                 réparation précise et fiable.{" "}
               </small>
             </Container>
+
             <Container className="text-center">
               <Button variant="warning" className=" mb-2" size="lg">
                 Nous contacter

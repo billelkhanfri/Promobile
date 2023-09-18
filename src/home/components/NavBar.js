@@ -42,7 +42,7 @@ function NavBar(props) {
               as={NavLink}
               exact
               to="/"
-              activeClassName="active-link"
+              activeclassname="active-link"
               className="home-link"
             >
               ACCUEIL
@@ -50,21 +50,21 @@ function NavBar(props) {
             <Nav.Link
               as={NavLink}
               to="/reparation"
-              activeClassName="active-link"
+              activeclassname="active-link"
             >
               REPARATION
             </Nav.Link>
             <Nav.Link
               as={NavLink}
               to="/microsoudure"
-              activeClassName="active-link"
+              activeclassname="active-link"
             >
               MICROSOUDURE
             </Nav.Link>
             <Nav.Link
               as={NavLink}
               to="/accessoire"
-              activeClassName="active-link"
+              activeclassname="active-link"
             >
               ACCESSOIRE
             </Nav.Link>
